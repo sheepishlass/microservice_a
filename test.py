@@ -21,6 +21,8 @@ conversion_request = {
         "to_currency": "EUR"
     }
 }
+print("Test 1: currency conversion")
+print("Conversion Request:", conversion_request)
 conversion_response = send_request(conversion_request)
 print("Conversion Response:", conversion_response)
 
@@ -28,11 +30,13 @@ print("Conversion Response:", conversion_response)
 conversion_request = {
     "request_type": "conversion",
     "data": {
-        "amount": 100,
+        "amount": 50,
         "from_currency": "ABC",
-        "to_currency": "EUR"
+        "to_currency": "TWD"
     }
 }
+print("\nTest 2: currency conversion for unsupported currency")
+print("Conversion Request:", conversion_request)
 conversion_response = send_request(conversion_request)
 print("Conversion Response:", conversion_response)
 
@@ -41,5 +45,7 @@ retrieval_request = {
     "request_type": "retrieval",
     "data": {}
 }
+print("\nTest 3: retrieval of exchange rates")
+print("Retrieval Request:", retrieval_request)
 retrieval_response = send_request(retrieval_request)
 print("Retrieval Response:", retrieval_response)
